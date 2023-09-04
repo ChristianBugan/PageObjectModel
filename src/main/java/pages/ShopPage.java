@@ -20,6 +20,7 @@ public class ShopPage {
 	public By orderDropdown = By.name("orderby");
 	public By priceSliderInitialPosition = By.xpath("//span[@style='left: 0%;']");
 	public By priceSliderFinalPosition = By.xpath("//span[@style='left: 100%;']");
+	public By priceSliderFinalMoved = By.xpath("//span[@style='left: 62.5%;']");
 	
 	
 	//metode
@@ -31,6 +32,22 @@ public class ShopPage {
 		Actions action = new Actions(driver);
 		//action.dragAndDropBy(element, 0, 0);
 		action.moveToElement(element).clickAndHold(element).moveByOffset(x,y).release().perform();
+		
+		
+		
+	}
+	
+	
+	// l-am folosit sa ducem element peste element - de exemplu testul de drag and drop slider (s-au dus la 15$ valoare)
+	
+	public void dragAndDropElement(By locator1, By locator2) {
+		
+		WebElement element1 = driver.findElement(locator1);
+		WebElement element2 = driver.findElement(locator2);
+		
+		Actions action = new Actions(driver);
+		
+		action.dragAndDrop(element1,element2).perform();
 		
 		
 		
