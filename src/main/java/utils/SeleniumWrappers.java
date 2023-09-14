@@ -31,5 +31,9 @@ public void click(By locator) {
 		
 	}
 	
+	public WebElement returnElement(By locator) {
+		return driver.findElement(locator);
+	}
+	
 
 }

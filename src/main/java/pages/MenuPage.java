@@ -25,6 +25,10 @@ public class MenuPage {
 	public By aboutLink = By.linkText("ABOUT");
 	public By eventsLink = By.linkText("EVENTS");
 	
+	public By searchIcon = By.cssSelector("button[class*='search_submit']");
+	public By searchInput = By.cssSelector("input[class='search_field']");
+	
+	
 	
 	// Si va contine metode specifice cu locatorii sau elementele de mai sus
 	// metode specifice = functionalitate a paginii in care ma aflu;
