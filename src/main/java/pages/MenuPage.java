@@ -23,9 +23,14 @@ public class MenuPage {
 	public By singleAuthorLink = By.linkText("Single author");
 	public By blogLink = By.linkText("BLOG");
 	public By aboutLink = By.linkText("ABOUT");
+	public By eventsLink = By.linkText("EVENTS");
+	
 	
 	// Si va contine metode specifice cu locatorii sau elementele de mai sus
 	// metode specifice = functionalitate a paginii in care ma aflu;
+	
+	
+	
 	
 	public void navigateTo(By locator) {
 		driver.findElement(locator).click();

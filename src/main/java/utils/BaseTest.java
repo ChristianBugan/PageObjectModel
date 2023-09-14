@@ -16,9 +16,9 @@ public class BaseTest {
 	@BeforeClass
 	public void setup() {
 		
-	//	driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
@@ -34,7 +34,8 @@ public class BaseTest {
 	public void tearDown() throws InterruptedException {
 		
 		Thread.sleep(4000); // BAD PRACTICE - aduci timpi morti
-		driver.close();
+		//driver.close(); // inchide tabul curent
+		driver.quit(); // inchide browserul indiferent de cate taburi are deschise.
 	}
 	
 }
