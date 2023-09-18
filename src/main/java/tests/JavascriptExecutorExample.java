@@ -64,7 +64,9 @@ public class JavascriptExecutorExample extends BaseTest {
 		//jse.executeScript("arguments[0].value='cooking'", app.returnElement(app.menu.searchIcon));
 		//jse.executeScript("arguments[0].click()", app.returnElement(app.menu.searchIcon));
 		
-		//Dragos mai baga o fisa
+		//Dragos mai baga o fisa la selenium wrappers si logica pt care am creat return element() de mai sus.
+		
+		
 	}
 	
 
