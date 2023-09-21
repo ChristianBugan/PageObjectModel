@@ -46,4 +46,12 @@ public void click(By locator) {
 	}
 	
 
+	public String getElementText(By locator) {
+		
+		return driver.findElement(locator).getText();	
+		
+	}
+	
+	
+	
 }

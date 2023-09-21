@@ -3,7 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SingleAuthorPage {
+import utils.SeleniumWrappers;
+
+public class SingleAuthorPage extends SeleniumWrappers {
 	
 	public WebDriver driver;
 	
@@ -16,9 +18,9 @@ public class SingleAuthorPage {
 	
 	
 	//locatori pentru procentele afisate.
-	public By dramaPercentage = By.xpath("//div[@class='sc_skills_total' and @data-ed='%' and text()='95%']");
-	public By biographyPercentage = By.xpath("//div[@class='sc_skills_total' and @data-ed='%' and text()='75%']");
-	public By cookbooksPercentage = By.xpath("//div[@class='sc_skills_total' and @data-ed='%' and text()='82%']");
+	public By dramaPercentage = By.xpath("(//div[@class = 'sc_skills_total'])[1]");
+	public By biographyPercentage = By.xpath("(//div[@class = 'sc_skills_total'])[2]");
+	public By cookbooksPercentage = By.xpath("(//div[@class = 'sc_skills_total'])[3]");
 
 	
 }
