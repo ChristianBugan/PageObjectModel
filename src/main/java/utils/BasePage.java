@@ -21,5 +21,5 @@ public class BasePage extends SeleniumWrappers {
 	
 	public HomePage homePage = new HomePage(driver);
 	
-	
+
 }

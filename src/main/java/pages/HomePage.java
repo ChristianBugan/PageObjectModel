@@ -13,7 +13,11 @@ public class HomePage extends SeleniumWrappers {
 		this.driver = driver;
 	}
 	
+	//locatori
 	
 	public By stormBooklink = By.cssSelector("a[href='storm']");
 	
+	public By signUpButton = By.xpath("//input[@value='Sign up']");
+
+	public By pickedText = By.xpath("//h4[em='Picked']");
 }
