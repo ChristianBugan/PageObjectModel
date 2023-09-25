@@ -6,7 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class ShopPage {
+import utils.BaseTest;
+
+public class ShopPage extends BaseTest {
 	
 	public WebDriver driver;
 	

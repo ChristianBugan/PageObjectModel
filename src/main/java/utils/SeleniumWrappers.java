@@ -53,5 +53,13 @@ public void click(By locator) {
 	}
 	
 	
+
+	public Boolean verifyIsDisplayed(By locator) {
+		
+		return driver.findElement(locator).isDisplayed();	
+		
+	}
+	
+	
 	
 }

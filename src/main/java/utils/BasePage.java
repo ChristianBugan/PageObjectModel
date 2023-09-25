@@ -1,6 +1,7 @@
 package utils;
 
 import pages.*;
+import tests.Homework24ShopPageVerifyTest;
 
 public class BasePage extends SeleniumWrappers {
 
@@ -15,6 +16,10 @@ public class BasePage extends SeleniumWrappers {
 	public SingleAuthorPage singleAuthor = new SingleAuthorPage(driver);
 	
 	public ShippingAddressPage shippingPage = new ShippingAddressPage(driver);
+	
+	public StormBookPage stormBook = new StormBookPage(driver);
+	
+	public HomePage homePage = new HomePage(driver);
 	
 	
 }
