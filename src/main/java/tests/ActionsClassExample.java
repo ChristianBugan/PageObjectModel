@@ -17,7 +17,7 @@ import utils.BaseTest;
 
 public class ActionsClassExample extends BaseTest {
 
-	//@Test(priority=1)
+	@Test(priority=1)
 	public void hoverExample() {
 		
 		MenuPage menu = new MenuPage(driver);
@@ -28,7 +28,7 @@ public class ActionsClassExample extends BaseTest {
 		
 	}
 	
-	//@Test(priority=2)
+	@Test(priority=2)
 	public void dragAndDropExample() throws InterruptedException {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		
@@ -88,7 +88,7 @@ public class ActionsClassExample extends BaseTest {
 		Thread.sleep(1000);
 	}
 		
-	@Test
+	//@Test
 	public void copyPasteExample() {
 		
 		//MenuPage menu = new MenuPage(driver);

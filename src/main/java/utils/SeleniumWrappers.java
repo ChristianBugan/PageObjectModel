@@ -76,6 +76,15 @@ public void scrollHorizontally(int x) {
 		
 	}
 	
+	public void draggingAndDropppingSlider(By locator, int x,int y) {
+		
+		WebElement element = driver.findElement(locator);
+		
+		Actions action = new Actions(driver);
+		//action.dragAndDropBy(element, 0, 0);
+		action.moveToElement(element).clickAndHold(element).moveByOffset(x,y).release().perform();
+		
+	}
 	
 	
 }

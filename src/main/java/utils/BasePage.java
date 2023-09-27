@@ -21,5 +21,9 @@ public class BasePage extends SeleniumWrappers {
 	
 	public HomePage homePage = new HomePage(driver);
 	
+	public BlogPage blogPage = new BlogPage(driver);
+	
+	public AudioPostPage audioPost = new AudioPostPage(driver);
+	
 
 }

@@ -22,13 +22,13 @@ public class StormBookPage extends SeleniumWrappers{
 		public By stormTitle = By.xpath("//h1[@class='product_title entry-title']");
 		
 		//PRETUL CARTII "STORM"
-		public By stormPrice = By.xpath("//*[@id=\"product-256\"]/div[2]/p/span/bdi"); // to be refactored?
+		public By stormPrice = By.xpath("(//p)[2]"); 
 		
 		//Semnul de LUPA/zoom/ de la cartea "STORM"
 		public By stormZoom = By.xpath("(//a[@class='woocommerce-product-gallery__trigger'])[1]");
 		
 		//descrierea cartii "STORM"
-		public By stormDescription = By.xpath("//p[contains(text(), 'This delightful book')]/text()[1]");
+		public By stormDescription = By.xpath("(//p)[3]");
 		
 		//categoria cartii "STORM"
 		public By stormCategory = By.xpath("//span[@class='posted_in']");

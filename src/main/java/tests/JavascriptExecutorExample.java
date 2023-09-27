@@ -43,7 +43,7 @@ public class JavascriptExecutorExample extends BaseTest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void example2() {
 		
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
