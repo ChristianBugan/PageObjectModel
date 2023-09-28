@@ -18,8 +18,6 @@ public class AudioPostPage extends SeleniumWrappers{
 	
 	public By playButton = By.xpath("//*[@id=\"mep_0\"]/div/div[3]/div[1]");
 	
-	
-	
 	//public By songSliderInitialPosition = By.xpath("//*[@id=\"mep_0\"]/div/div[3]/div[3]/span");
 	public By songSliderInitialPosition = By.cssSelector("span[class*=mejs-time-total]");
 	
