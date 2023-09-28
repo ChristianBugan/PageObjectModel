@@ -2,10 +2,13 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
+
+import utils.SeleniumWrappers;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class MenuPage {
+public class MenuPage extends SeleniumWrappers {
 
 	public WebDriver driver;
 	
@@ -30,6 +33,9 @@ public class MenuPage {
 	
 	
 	
+	
+	
+	
 	// Si va contine metode specifice cu locatorii sau elementele de mai sus
 	// metode specifice = functionalitate a paginii in care ma aflu;
 	
@@ -46,7 +52,14 @@ public class MenuPage {
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();	
 		//adaugi perform la finalul chain-ului de actions sa functioneze
+			
+	}
+	
+	public void search(String textToSearch) {
 		
+		click(searchIcon);
+		sendKeys(searchInput, textToSearch);
+		click(searchIcon);
 		
 	}
 	
