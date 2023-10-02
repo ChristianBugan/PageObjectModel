@@ -2,15 +2,20 @@ package tests;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.Set;
+
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
 import pages.MenuPage;
 import utils.BaseTest;
+import org.openqa.selenium.Cookie;
 
-public class LoginTest extends BaseTest {
+public class CookiesLogin extends BaseTest {
 
+	Set<Cookie> cookies;
+	
 	
 	@Parameters({"user", "pass"})
 	@Test(priority=1, groups="LoginFunctionality")
@@ -20,28 +25,26 @@ public class LoginTest extends BaseTest {
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginInApp(username, password);
-		//assertTrue(driver.findElement(login.successLoginPopup).isDisplayed());
-		assertTrue(login.checkLoginMessageIsDisplayed(login.successLoginPopup));
+		assertTrue(login.checkLoginMessageIsDisplayed(login.successLoginPopup));		
+	
+		cookies = driver.manage().getCookies();
+		System.out.println("All cookies:" + cookies);
 		
-		login.logoutFromApp();
 	}
 	
-	
-	@Parameters({"invUser", "invPass"})
-	@Test(priority=2, groups="LoginFunctionality")
-	public void invalidLoginTest(String invalidUser, String invalidPassword) {
-	
+	@Test(priority = 2)
+	public void cookiesLogin() throws InterruptedException {
+		
 		MenuPage menu = new MenuPage(driver);
 		menu.navigateTo(menu.loginLink);
 		
-		LoginPage login = new LoginPage(driver);
-		login.loginInApp(invalidUser, invalidPassword);
-		assertTrue(login.checkLoginMessageIsDisplayed(login.errorLoginPopup));
+		for(Cookie cook : cookies) {
+			driver.manage().addCookie(cook);
+		}
 		
-		
-		
+		menu.navigateTo(menu.shopLink);
+		Thread.sleep(4000);
 		
 	}
-	
 	
 }
