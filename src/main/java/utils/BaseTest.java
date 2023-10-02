@@ -6,15 +6,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 public class BaseTest {
 
 	public BasePage app;
 	public static WebDriver driver;
 	
-	@BeforeClass
-	public void setup() {
+	@Parameters({"appURL"})
+	@BeforeMethod(alwaysRun = true)
+	public void setup(String url) {
 		
 		driver = new ChromeDriver();
 		
@@ -24,13 +28,13 @@ public class BaseTest {
 		
 		driver.manage().window().maximize();//face maximize la browser.
 		
-		driver.get("https://keybooks.ro/");
+		driver.get(url);
 		
 		app = new BasePage();
 		
 	}
 	
-	@AfterClass
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws InterruptedException {
 		
 		Thread.sleep(4000); // BAD PRACTICE - aduci timpi morti
