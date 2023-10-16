@@ -25,5 +25,11 @@ public class BasePage extends SeleniumWrappers {
 	
 	public AudioPostPage audioPost = new AudioPostPage(driver);
 	
+	public PostFormatsPage postFormatsPage = new PostFormatsPage(driver);
+	
+	public GalleryFormatPage galleryFormatPage = new GalleryFormatPage(driver);
+	
+	public BookTemplate bookTemplate = new BookTemplate(driver);
+	
 
 }
